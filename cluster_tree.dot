@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Throughput <= 0.675\ngini = 0.784\nsamples = 63\nvalue = [16, 12, 14, 6, 15]\nclass = 2", fillcolor="#fefcfb"] ;
+1 [label="Throughput <= 0.509\ngini = 0.726\nsamples = 48\nvalue = [16, 12, 14, 6, 0]\nclass = 2", fillcolor="#fdf8f3"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="CQI <= 0.585\ngini = 0.633\nsamples = 32\nvalue = [0, 12, 14, 6, 0]\nclass = 3", fillcolor="#ebfcf9"] ;
+1 -> 2 ;
+3 [label="Latency <= 0.205\ngini = 0.444\nsamples = 18\nvalue = [0, 12, 0, 6, 0]\nclass = 4", fillcolor="#bdf29c"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 6\nvalue = [0, 0, 0, 6, 0]\nclass = 1", fillcolor="#3c39e5"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 12\nvalue = [0, 12, 0, 0, 0]\nclass = 4", fillcolor="#7be539"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 14\nvalue = [0, 0, 14, 0, 0]\nclass = 3", fillcolor="#39e5c5"] ;
+2 -> 6 ;
+7 [label="gini = 0.0\nsamples = 16\nvalue = [16, 0, 0, 0, 0]\nclass = 2", fillcolor="#e58139"] ;
+1 -> 7 ;
+8 [label="gini = 0.0\nsamples = 15\nvalue = [0, 0, 0, 0, 15]\nclass = 5", fillcolor="#e539c0"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
